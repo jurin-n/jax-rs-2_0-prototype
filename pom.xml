@@ -23,7 +23,7 @@
   <build>
     <finalName>jax-rs-2_0-prototype</finalName>
     <plugins>
-        <plugin>
+    	<plugin>
     		<groupId>org.apache.maven.plugins</groupId>
     		<artifactId>maven-compiler-plugin</artifactId>
     		<version>3.3</version>
@@ -32,31 +32,7 @@
     			<target>1.8</target>
     		</configuration>
     	</plugin>
-    	     	<plugin>
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-war-plugin</artifactId>
-	        <version>2.1.1</version>
-	        <configuration>
-	          <failOnMissingWebXml>false</failOnMissingWebXml> <!-- web.xml が無くても mvn package 出来るように -->
-	          <packagingExcludes>WEB-INF/classes/*.class</packagingExcludes>
-	        </configuration>
-    	</plugin>
-    	<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <executions>
-                <execution>
-                    <id>copy-dependencies</id>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>copy-dependencies</goal>
-                    </goals>
-                    <configuration>
-                        <includeScope>compile</includeScope>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin><plugin>
+     	<plugin>
 	        <groupId>org.apache.maven.plugins</groupId>
 	        <artifactId>maven-war-plugin</artifactId>
 	        <version>2.1.1</version>
@@ -81,6 +57,6 @@
                 </execution>
             </executions>
         </plugin>
-    </plugins>
+     </plugins>
   </build>
 </project>
