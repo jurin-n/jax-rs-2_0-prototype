@@ -24,7 +24,7 @@ public class TeamResource {
 	  
 	  @POST
 	  public Response createTeam(Team t){
-		  em.merge(t);
+		  em.persist(t);
 		  return Response
 				  .status(Response.Status.CREATED)
 				  .build();
