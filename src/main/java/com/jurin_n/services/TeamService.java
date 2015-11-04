@@ -12,6 +12,14 @@ public class TeamService {
 	private EntityManager em;
 	  
 	public void createTeam(Team t){
+		String id = t.getId()+"@createTeam";
+		t.setId(id);
+		em.persist(t);
+	}
+	
+	public void createTeam2(Team t){
+		String id = t.getId()+"@createTeam2";
+		t.setId(id);
 		em.persist(t);
 	}
 }

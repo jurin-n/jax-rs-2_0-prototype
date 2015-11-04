@@ -27,6 +27,10 @@ public class TeamResource {
 		  System.out.println("[DEBUG] TeamResource.createTeam サービス前");
 		  ts.createTeam(t);
 		  System.out.println("[DEBUG] TeamResource.createTeam サービス後");
+		  
+		  System.out.println("[DEBUG] TeamResource.createTeam2 サービス前");
+		  ts.createTeam2(t);
+		  System.out.println("[DEBUG] TeamResource.createTeam2 サービス後");
 		  //レスポンス
 		  return Response
 				  .status(Response.Status.CREATED)
