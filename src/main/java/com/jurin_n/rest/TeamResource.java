@@ -29,7 +29,10 @@ public class TeamResource {
 		  System.out.println("[DEBUG] TeamResource.createTeam サービス後");
 		  
 		  System.out.println("[DEBUG] TeamResource.createTeam2 サービス前");
-		  ts.createTeam2(t);
+		  Team t2 = new Team();
+		  t2.setId(t.getId()+"@createTeam2");
+		  t2.setName(t.getName());
+		  ts.createTeam2(t2);
 		  System.out.println("[DEBUG] TeamResource.createTeam2 サービス後");
 		  //レスポンス
 		  return Response
