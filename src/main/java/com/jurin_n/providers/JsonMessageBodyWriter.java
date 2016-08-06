@@ -13,33 +13,31 @@ import javax.ws.rs.ext.MessageBodyWriter;
 import javax.ws.rs.ext.Provider;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-//import org.codehaus.jackson.map.ObjectMapper;
-
-import com.jurin_n.entity.Team;
+import com.jurin_n.domain.team.Team;
 
 @Provider
 @Produces(MediaType.APPLICATION_JSON)
 public class JsonMessageBodyWriter implements MessageBodyWriter<Team> {
 
-	@Override
-	public long getSize(Team arg0, Class<?> type
-						, Type genericType, Annotation[] annotation
-						, MediaType mediaType) {
-		return -1;
-	}
+    @Override
+    public long getSize(Team arg0, Class<?> type, Type genericType,
+            Annotation[] annotation, MediaType mediaType) {
+        return -1;
+    }
 
-	@Override
-	public boolean isWriteable(Class<?> type, Type genericType, Annotation[] annotation, MediaType mediaType) {
-		return type==Team.class;
-	}
+    @Override
+    public boolean isWriteable(Class<?> type, Type genericType,
+            Annotation[] annotation, MediaType mediaType) {
+        return type == Team.class;
+    }
 
-	@Override
-	public void writeTo(Team target, Class<?> type, Type genericType
-					, Annotation[] annotation, MediaType mediaType
-					, MultivaluedMap<String, Object> httpHeaders
-					, OutputStream outputStream) throws IOException, WebApplicationException {
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.writeValue(outputStream, target);
-	}
+    @Override
+    public void writeTo(Team target, Class<?> type, Type genericType,
+            Annotation[] annotation, MediaType mediaType,
+            MultivaluedMap<String, Object> httpHeaders,
+            OutputStream outputStream)
+                    throws IOException, WebApplicationException {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(outputStream, target);
+    }
 }

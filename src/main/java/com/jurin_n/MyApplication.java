@@ -8,5 +8,5 @@ import javax.ws.rs.core.Application;
  */
 @ApplicationPath("/")
 public class MyApplication extends Application {
-  // GlassFish ではオーバーライドは不要
+    // GlassFish ではオーバーライドは不要
 }
