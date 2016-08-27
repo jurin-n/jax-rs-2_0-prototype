@@ -8,7 +8,8 @@
     <!-- <exclude-unlisted-classes>false</exclude-unlisted-classes> -->
     <class>com.jurin_n.domain.hotel.Hotel</class>
     <class>com.jurin_n.domain.hotel.Room</class>
-
+    <class>com.jurin_n.domain.pc.Pc</class>
+    <class>com.jurin_n.domain.pc.Parts</class>
     <properties>
       <!-- スキーマ生成関連プロパティ -->
       <!-- javax.persistence.schema-generation. 系はJavaEE7(JPA2.1)から使えるプロパティorz -->
@@ -31,7 +32,7 @@
       <property name="eclipselink.application-location" value="./src/test/resources" />
 
       <!-- ログ出力関連プロパティ -->
-      <property name="eclipselink.logging.level" value="ALL"/>
+      <property name="eclipselink.logging.level" value="ALL" />
 
       <!-- JDBC関連プロパティ -->
       <!-- <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/> 
