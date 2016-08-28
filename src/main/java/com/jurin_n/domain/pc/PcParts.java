@@ -9,8 +9,8 @@ import javax.persistence.UniqueConstraint;
 import com.jurin_n.domain.pc.Pc;
 
 @Entity
-// @Table(uniqueConstraints = @UniqueConstraint(columnNames = { "pc_id",
-// "partsId" }) )
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = { "pc_id",
+        "partsId" }) )
 public class PcParts {
     @Id
     private String id;
