@@ -3,8 +3,8 @@ package com.jurin_n.infrastructure.persistence;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.jurin_n.domain.pc.Pc;
-import com.jurin_n.domain.pc.PcRepository;
+import com.jurin_n.domain.pcAndParts.Pc;
+import com.jurin_n.domain.pcAndParts.PcRepository;
 
 public class JPAPcRepository implements PcRepository {
     @PersistenceContext

@@ -1,4 +1,4 @@
-package com.jurin_n.domain.pc;
+package com.jurin_n.domain.pcAndParts;
 
 import java.util.List;
 

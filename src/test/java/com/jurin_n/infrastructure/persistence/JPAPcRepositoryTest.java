@@ -4,12 +4,11 @@ import java.util.Arrays;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
-import com.jurin_n.domain.pc.Parts;
-import com.jurin_n.domain.pc.Pc;
+import com.jurin_n.domain.pcAndParts.Parts;
+import com.jurin_n.domain.pcAndParts.Pc;
 import com.jurin_n.junit.rules.JPAResource;
 
 public class JPAPcRepositoryTest {
@@ -29,8 +28,8 @@ public class JPAPcRepositoryTest {
     }
 
     @Test
-    //@Ignore
-    public void test1() {
+    public void test() {
+        // パーツ登録
         Parts p1 = new Parts("PT001", "CPU");
         Parts p2 = new Parts("PT002", "Fun");
 
@@ -41,10 +40,8 @@ public class JPAPcRepositoryTest {
         jpa.getEm().flush();
         jpa.getEm().clear();
         jpa.getEm().getTransaction().commit();
-    }
 
-    @Test
-    public void test2() {
+        // パーツ使いPC登録
         Parts parts1 = jpa.getEm().find(Parts.class, "PT001");
         Parts parts2 = jpa.getEm().find(Parts.class, "PT002");
         Pc pc1 = new Pc("P001", "Mac OS/X", Arrays.asList(parts1, parts2));
