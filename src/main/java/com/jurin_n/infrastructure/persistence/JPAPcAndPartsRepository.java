@@ -4,17 +4,17 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import com.jurin_n.domain.pcAndParts.Pc;
-import com.jurin_n.domain.pcAndParts.PcRepository;
+import com.jurin_n.domain.pcAndParts.PcAndPartsRepository;
 
-public class JPAPcRepository implements PcRepository {
+public class JPAPcAndPartsRepository implements PcAndPartsRepository {
     @PersistenceContext
     private EntityManager em;
 
-    public JPAPcRepository() {
+    public JPAPcAndPartsRepository() {
         super();
     }
 
-    public JPAPcRepository(EntityManager em) {
+    public JPAPcAndPartsRepository(EntityManager em) {
         super();
         this.em = em;
     }
