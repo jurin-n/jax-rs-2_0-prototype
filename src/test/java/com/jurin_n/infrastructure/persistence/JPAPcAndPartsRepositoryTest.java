@@ -7,8 +7,8 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
-import com.jurin_n.domain.pcAndParts.Parts;
-import com.jurin_n.domain.pcAndParts.Pc;
+import com.jurin_n.domain.pcAndParts.Parts2;
+import com.jurin_n.domain.pcAndParts.Pc2;
 import com.jurin_n.junit.rules.JPAResource;
 
 public class JPAPcAndPartsRepositoryTest {
@@ -30,10 +30,10 @@ public class JPAPcAndPartsRepositoryTest {
     @Test
     public void test() {
         // パーツ作成とPC作成
-        Parts parts1 = new Parts("PT001", "CPU");
-        Parts parts2 = new Parts("PT002", "Fun");
-        Pc pc1 = new Pc("P001", "Mac OS/X", Arrays.asList(parts1, parts2));
-        Pc pc2 = new Pc("P002", "Mac OS/X 2016 version",
+        Parts2 parts1 = new Parts2("PT001", "CPU");
+        Parts2 parts2 = new Parts2("PT002", "Fun");
+        Pc2 pc1 = new Pc2("P001", "Mac OS/X", Arrays.asList(parts1, parts2));
+        Pc2 pc2 = new Pc2("P002", "Mac OS/X 2016 version",
                 Arrays.asList(parts1, parts2));
         jpa.getEm().getTransaction().begin();
         sut.persist(pc1);

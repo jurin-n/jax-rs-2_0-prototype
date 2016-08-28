@@ -8,8 +8,8 @@
     <!-- <exclude-unlisted-classes>false</exclude-unlisted-classes> -->
     <class>com.jurin_n.domain.hotel.Hotel</class>
     <class>com.jurin_n.domain.hotel.Room</class>
-    <class>com.jurin_n.domain.pcAndParts.Pc</class>
-    <class>com.jurin_n.domain.pcAndParts.Parts</class>
+    <class>com.jurin_n.domain.pcAndParts.Pc2</class>
+    <class>com.jurin_n.domain.pcAndParts.Parts2</class>
     <properties>
       <!-- スキーマ生成関連プロパティ -->
       <!-- javax.persistence.schema-generation. 系はJavaEE7(JPA2.1)から使えるプロパティorz -->

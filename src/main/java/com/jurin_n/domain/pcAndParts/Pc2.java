@@ -8,24 +8,24 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Pc {
+public class Pc2 {
     @Id
     private String id;
     private String name;
     @ManyToMany(cascade = CascadeType.PERSIST)
-    private List<Parts> parts;
+    private List<Parts2> parts;
 
-    public Pc() {
+    public Pc2() {
         super();
     }
 
-    public Pc(String id, String name) {
+    public Pc2(String id, String name) {
         super();
         this.id = id;
         this.name = name;
     }
 
-    public Pc(String id, String name, List<Parts> parts) {
+    public Pc2(String id, String name, List<Parts2> parts) {
         super();
         this.id = id;
         this.name = name;
@@ -40,7 +40,7 @@ public class Pc {
         return name;
     }
 
-    public List<Parts> getParts() {
+    public List<Parts2> getParts() {
         return parts;
     }
 }

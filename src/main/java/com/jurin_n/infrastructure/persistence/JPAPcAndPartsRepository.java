@@ -3,7 +3,7 @@ package com.jurin_n.infrastructure.persistence;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.jurin_n.domain.pcAndParts.Pc;
+import com.jurin_n.domain.pcAndParts.Pc2;
 import com.jurin_n.domain.pcAndParts.PcAndPartsRepository;
 
 public class JPAPcAndPartsRepository implements PcAndPartsRepository {
@@ -20,7 +20,7 @@ public class JPAPcAndPartsRepository implements PcAndPartsRepository {
     }
 
     @Override
-    public void persist(Pc pc) {
+    public void persist(Pc2 pc) {
         em.persist(pc);
     }
 }

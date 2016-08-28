@@ -7,18 +7,18 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Parts {
+public class Parts2 {
     @Id
     private String id;
     private String name;
     @ManyToMany(mappedBy = "parts")
-    private List<Pc> pcs;
+    private List<Pc2> pcs;
 
-    public Parts() {
+    public Parts2() {
         super();
     }
 
-    public Parts(String id, String name) {
+    public Parts2(String id, String name) {
         super();
         this.id = id;
         this.name = name;
@@ -32,7 +32,7 @@ public class Parts {
         return name;
     }
 
-    public List<Pc> getPcs() {
+    public List<Pc2> getPcs() {
         return pcs;
     }
 }
