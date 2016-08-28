@@ -10,6 +10,9 @@
     <class>com.jurin_n.domain.hotel.Room</class>
     <class>com.jurin_n.domain.pcAndParts.Pc2</class>
     <class>com.jurin_n.domain.pcAndParts.Parts2</class>
+    <class>com.jurin_n.domain.pc.Pc</class>
+    <class>com.jurin_n.domain.pc.PcParts</class>
+    <class>com.jurin_n.domain.parts.Parts</class>
     <properties>
       <!-- スキーマ生成関連プロパティ -->
       <!-- javax.persistence.schema-generation. 系はJavaEE7(JPA2.1)から使えるプロパティorz -->
