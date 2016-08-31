@@ -1,5 +1,6 @@
 package com.jurin_n.jaxrs.resources;
 
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -8,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.jurin_n.domain.team.Team;
+import com.jurin_n.domain.team.TeamService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -19,22 +21,36 @@ import io.swagger.annotations.ApiOperation;
 public class TeamResource {
     static final String PATH = "/team";
 
+    @Inject
+    TeamService service;
+
+    public TeamResource(TeamService teamService) {
+        super();
+        service = teamService;
+    }
+
+    public TeamResource() {
+        super();
+    }
+
     @GET
     @MaxAge(value = 1000)
     @ApiOperation(value = "すべての国情報を取得", notes = "xx", response = Team.class, code = 200)
     public Response getTeams() {
         System.out.println(this.getClass().getName() + "[getTeams]");
+        Team team = service.getTeams();
+
         // レスポンス
-        return Response.status(Response.Status.OK)
-                .entity(new Team("2", "test2")).build();
+        return Response.status(Response.Status.OK).entity(team).build();
     }
 
     @GET
     @Path("/1")
     public Response getTeam() {
         System.out.println(this.getClass().getName() + "[getTeam]");
+        Team team = service.getTeam();
+
         // レスポンス
-        return Response.status(Response.Status.OK)
-                .entity(new Team("1", "test1")).build();
+        return Response.status(Response.Status.OK).entity(team).build();
     }
 }
