@@ -12,7 +12,7 @@ public class Pc2 {
     @Id
     private String id;
     private String name;
-    @ManyToMany(cascade = CascadeType.PERSIST)
+    @ManyToMany(cascade = {CascadeType.ALL})
     private List<Parts2> parts;
 
     public Pc2() {
